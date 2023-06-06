@@ -1,4 +1,5 @@
 import dotenv from 'dotenv'
+import process from 'process'
 import path from 'path'
 dotenv.config({ path: path.join(process.cwd(), '.env') })
 
