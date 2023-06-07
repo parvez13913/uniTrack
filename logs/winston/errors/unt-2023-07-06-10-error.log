@@ -1,0 +1,1 @@
+Wed Jun 07 2023 10:21:54 [UniTrack] error: Fail to connect database The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
