@@ -64,6 +64,16 @@
             "date": 1686307469760,
             "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-09-06-16-error.log",
             "hash": "f91c5a808801f80c3d41d14cd7d0b1ade5ddb0dd06cb62f0ff59e36ffaf71754"
+        },
+        {
+            "date": 1686309092249,
+            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-09-06-17-error.log",
+            "hash": "e95542c9370b27477fcfbb763949ba392e2332bea9a38da5ad71e7632e9b298c"
+        },
+        {
+            "date": 1686317491847,
+            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-09-06-19-error.log",
+            "hash": "fd771b64aca9d7614d49eff889c9c2e9d299440eb3aaa516b31b1c74137270e6"
         }
     ],
     "hashType": "sha256"
