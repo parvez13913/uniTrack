@@ -1,9 +1,15 @@
 import httpStatus from 'http-status';
+import { SortOrder } from 'mongoose';
 import ApiError from '../../../errors/ApiErrors';
+
+import { PaginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import { academicSemesterTitleCodeMapper } from './academicSemester.constant';
-import { IAcademicSemester } from './academicSemester.interface';
+import {
+  IAcademicSemester,
+  IAcademicSemesterFilters,
+} from './academicSemester.interface';
 import { AcamemicSemester } from './academicSemester.model';
 
 const createSemester = async (
@@ -18,11 +24,47 @@ const createSemester = async (
 };
 
 const getAllSemesters = async (
-  paginationsOptions: IPaginationOptions
+  filters: IAcademicSemesterFilters,
+  paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
-  const { page = 1, limit = 10 } = paginationsOptions;
-  const skip = (page - 1) * limit;
-  const result = await AcamemicSemester.find().sort().skip(skip).limit(limit);
+  const { searchTerm } = filters;
+  const andConditions = [
+    {
+      $or: [
+        {
+          title: {
+            $regex: searchTerm,
+            $options: 'i',
+          },
+        },
+        {
+          code: {
+            $regex: searchTerm,
+            $options: 'i',
+          },
+        },
+        {
+          year: {
+            $regex: searchTerm,
+            $options: 'i',
+          },
+        },
+      ],
+    },
+  ];
+
+  const { page, limit, skip, sortBy, sortOrder } =
+    PaginationHelpers.calculatePagination(paginationOptions);
+
+  const sortConditions: { [key: string]: SortOrder } = {};
+  if (sortBy && sortOrder) {
+    sortConditions[sortBy] = sortOrder;
+  }
+
+  const result = await AcamemicSemester.find({ $and: andConditions })
+    .sort(sortConditions)
+    .skip(skip)
+    .limit(limit);
   const total = await AcamemicSemester.countDocuments();
   return {
     meta: {
