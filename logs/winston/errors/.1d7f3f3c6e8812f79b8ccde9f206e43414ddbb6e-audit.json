@@ -154,6 +154,11 @@
             "date": 1686553368162,
             "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-12-06-13-error.log",
             "hash": "b1319a1712e45dd020513750902e7bdec9cda3d2b272a0eddcbb5b9dfaf20546"
+        },
+        {
+            "date": 1686556894430,
+            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-12-06-14-error.log",
+            "hash": "c597a45472c2339fabcb61c0b0f5c67219c3cadfaad3b2b51157b7854b41187c"
         }
     ],
     "hashType": "sha256"
