@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import httpStatus from 'http-status';
-import { paginationContstants } from '../../../constants/paginationConstants';
+import { paginationFields } from '../../../constants/paginationConstants';
 import catchAsync from '../../../shared/catchAsync';
 import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
@@ -26,10 +26,12 @@ const createAcademicSemister = catchAsync(
 
 const getAllSemesters = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
-    const paginationsOptions = pick(req.query, paginationContstants);
+    const filters = pick(req.query, ['searchTerm']);
+    const paginationOptions = pick(req.query, paginationFields);
 
     const result = await AcademicSemesterService.getAllSemesters(
-      paginationsOptions
+      filters,
+      paginationOptions
     );
 
     sendResponse<IAcademicSemester[]>(res, {
