@@ -13,5 +13,10 @@ router.post(
 
 router.get('/', AcademicFacultyController.getAllFaculties);
 router.get('/:id', AcademicFacultyController.getSingleFaculty);
+router.patch(
+  '/:id',
+  validateRequest(AcademicFacultyValidation.updateFacultyZodSchema),
+  AcademicFacultyController.updateFaculty
+);
 
 export const AcademicFacultyRoutes = router;

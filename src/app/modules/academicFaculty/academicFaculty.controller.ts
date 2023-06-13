@@ -30,7 +30,7 @@ const getAllFaculties = catchAsync(async (req: Request, res: Response) => {
     paginationOptions
   );
 
-  sendResponse(res, {
+  sendResponse<IAcademicFaculty[]>(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Academic Faculty retrieved Successfully !!',
@@ -43,10 +43,23 @@ const getSingleFaculty = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
   const result = await AcademicFacultyService.getSingleFaculty(id);
 
-  sendResponse(res, {
+  sendResponse<IAcademicFaculty>(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Academic Faculty fetched Successfully !!',
+    data: result,
+  });
+});
+
+const updateFaculty = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const updatedData = req.body;
+  const result = await AcademicFacultyService.updateFaculty(id, updatedData);
+
+  sendResponse<IAcademicFaculty>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Academic Faculty Updated SuccessFully',
     data: result,
   });
 });
@@ -55,4 +68,5 @@ export const AcademicFacultyController = {
   createFaculty,
   getAllFaculties,
   getSingleFaculty,
+  updateFaculty,
 };
