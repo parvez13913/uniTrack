@@ -8,5 +8,6 @@ router.post(
   AcademicDepartmentController.createDepartment
 );
 router.get('/', AcademicDepartmentController.getAllDepartment);
+router.get('/:id', AcademicDepartmentController.getSingleDepartment);
 
 export const AcademicDepartmentRoutes = router;
