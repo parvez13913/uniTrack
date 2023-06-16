@@ -166,3 +166,15 @@
   label: 'UniTrack',
   timestamp: '2023-06-15T07:55:41.694Z'
 }
+{
+  message: '🛢🛢Database is connected successfull',
+  level: 'info',
+  label: 'UniTrack',
+  timestamp: '2023-06-15T07:56:23.799Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'UniTrack',
+  timestamp: '2023-06-15T07:56:23.825Z'
+}
