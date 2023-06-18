@@ -41,7 +41,7 @@ export type IStudent = {
   localGuardian: LocalGuardian;
   academicFaculty: Types.ObjectId | IAcademicFaculty;
   academicDepartment: Types.ObjectId | IAcademicDepartment;
-  academicSemester: IAcademicSemester;
+  academicSemester: Types.ObjectId | IAcademicSemester;
   profileImage?: string;
 };
 
