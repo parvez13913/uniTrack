@@ -45,4 +45,12 @@ export type IStudent = {
   profileImage?: string;
 };
 
+export type IStudentsFilters = {
+  searchTerm?: string;
+  id?: string;
+  bloodGroup?: string;
+  contactNo?: string;
+  emergencyContactNo?: string;
+};
+
 export type StudentModel = Model<IStudent, Record<string, unknown>>;
