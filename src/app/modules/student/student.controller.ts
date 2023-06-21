@@ -25,6 +25,19 @@ const getAllStudents = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleStudents = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.body;
+  const result = await StudentService.getSingleStudents(id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Student Fetched Successfully!!',
+    data: result,
+  });
+});
+
 export const StudentController = {
   getAllStudents,
+  getSingleStudents,
 };
