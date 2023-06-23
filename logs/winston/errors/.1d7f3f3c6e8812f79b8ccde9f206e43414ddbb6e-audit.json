@@ -6,21 +6,6 @@
     "auditLog": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\.1d7f3f3c6e8812f79b8ccde9f206e43414ddbb6e-audit.json",
     "files": [
         {
-            "date": 1686218793703,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-08-06-16-error.log",
-            "hash": "8d0e023c53e1e0efed118f19b1988c45c126fb2f90f7b2d7c07bd3ac9504fff6"
-        },
-        {
-            "date": 1686307469760,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-09-06-16-error.log",
-            "hash": "f91c5a808801f80c3d41d14cd7d0b1ade5ddb0dd06cb62f0ff59e36ffaf71754"
-        },
-        {
-            "date": 1686309092249,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-09-06-17-error.log",
-            "hash": "e95542c9370b27477fcfbb763949ba392e2332bea9a38da5ad71e7632e9b298c"
-        },
-        {
             "date": 1686317491847,
             "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-09-06-19-error.log",
             "hash": "fd771b64aca9d7614d49eff889c9c2e9d299440eb3aaa516b31b1c74137270e6"
@@ -239,6 +224,21 @@
             "date": 1687428032771,
             "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-22-06-16-error.log",
             "hash": "2f6a9e55d32daf1b87d17781baf252e8c88d4644df2edb358c5d6ff18106c79d"
+        },
+        {
+            "date": 1687510123256,
+            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-23-06-14-error.log",
+            "hash": "6e74ff11d59e39865ed42c6ca2a7373069fec377164d590d2a9cd6aa48052406"
+        },
+        {
+            "date": 1687519118292,
+            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-23-06-17-error.log",
+            "hash": "78ae86c81f407b73cf7a2ebec5ce1468a8e6bcbb0f518676a3f258fde055fe55"
+        },
+        {
+            "date": 1687521627407,
+            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-23-06-18-error.log",
+            "hash": "9c074ab1feef621af9d070a8090babf525ddc87106c78e445983fa5b9c363da8"
         }
     ],
     "hashType": "sha256"

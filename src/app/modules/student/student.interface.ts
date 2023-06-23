@@ -3,7 +3,7 @@ import { IAcademicDepartment } from '../academicDepartment/academicDepartment.in
 import { IAcademicFaculty } from '../academicFaculty/academicFaculty.interface';
 import { IAcademicSemester } from '../academicSemester/academicSemester.interface';
 
-export type UserName = {
+export type StudentName = {
   firstName: string;
   middleName: string;
   lastName: string;
@@ -28,7 +28,7 @@ export type LocalGuardian = {
 
 export type IStudent = {
   id: string;
-  name: UserName;
+  name: StudentName;
   gender: 'male' | 'female';
   dateOfBirth: string;
   email: string;
