@@ -18,4 +18,12 @@ export type IFaculty = {
   profileImage?: string;
 };
 
+export type IFacultyfilters = {
+  searchTerm?: string;
+  id?: string;
+  email?: string;
+  contactNo?: string;
+  emergencyContactNo?: string;
+};
+
 export type FacultyModel = Model<IFaculty, Record<string, unknown>>;
