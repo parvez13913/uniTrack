@@ -1,4 +1,6 @@
+import httpStatus from 'http-status';
 import { SortOrder } from 'mongoose';
+import ApiError from '../../../errors/ApiErrors';
 import { PaginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
@@ -64,7 +66,35 @@ const getSingleFaculty = async (id: string): Promise<IFaculty | null> => {
   return result;
 };
 
+const updateFaculty = async (
+  id: string,
+  payload: Partial<IFaculty>
+): Promise<IFaculty | null> => {
+  const isExit = await Faculty.findOne({ id });
+  if (!isExit) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Faculty not found');
+  }
+
+  const { name, ...facultyData } = payload;
+  const updatedFacultyData: Partial<IFaculty> = { ...facultyData };
+
+  if (name && Object.keys(name).length > 0) {
+    Object.keys(name).forEach(key => {
+      const nameKey = `name.${key}`;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (updatedFacultyData as any)[nameKey] = name[key as keyof typeof name];
+    });
+  }
+
+  const result = await Faculty.findOneAndUpdate({ id }, updatedFacultyData, {
+    new: true,
+  });
+
+  return result;
+};
+
 export const FacultyService = {
   getSingleFaculty,
   getAllFaculty,
+  updateFaculty,
 };
