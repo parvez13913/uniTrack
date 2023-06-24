@@ -87,8 +87,14 @@ const createUserZodSchema = z.object({
       }),
       profileImage: z.string().optional(),
     }),
+  }),
+});
 
-    /* faculty: z.object({
+const createFacultyZodSchema = z.object({
+  body: z.object({
+    password: z.string().optional(),
+
+    faculty: z.object({
       name: z.object({
         firstName: z.string({
           required_error: 'First Name is Required',
@@ -119,10 +125,11 @@ const createUserZodSchema = z.object({
         required_error: 'Designation is Required',
       }),
       profileImage: z.string().optional(),
-    }),*/
+    }),
   }),
 });
 
 export const UserValidation = {
   createUserZodSchema,
+  createFacultyZodSchema,
 };
