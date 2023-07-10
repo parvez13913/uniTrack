@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { bloodGroup, gender } from '../student/student.constants';
 
-const createUserZodSchema = z.object({
+const createStudentZodSchema = z.object({
   body: z.object({
     password: z.string().optional(),
 
@@ -124,12 +124,21 @@ const createFacultyZodSchema = z.object({
       designation: z.string({
         required_error: 'Designation is Required',
       }),
+      bloodGroup: z.string({
+        required_error: 'BloodGroup is Required',
+      }),
+      academicDepartment: z.string({
+        required_error: 'Academic Department is Required',
+      }),
+      academicFaculty: z.string({
+        required_error: 'Academic Faculty is Required',
+      }),
       profileImage: z.string().optional(),
     }),
   }),
 });
 
 export const UserValidation = {
-  createUserZodSchema,
+  createStudentZodSchema,
   createFacultyZodSchema,
 };
