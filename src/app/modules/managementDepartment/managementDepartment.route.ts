@@ -8,4 +8,6 @@ router.post(
   ManagementDepartmentController.createDepartment
 );
 
+router.get('/', ManagementDepartmentController.getAllDepartment);
+
 export const ManagemantDepartmentRoute = router;
