@@ -1,18 +1,20 @@
 export const gender = ['male', 'female'];
 
 export const facultyFilterableFildes = [
-  'searchTerm',
-  'id',
   'email',
   'contactNo',
   'emergencyContactNo',
+  'name.firstName',
+  'name.lastName',
+  'name.middleName',
 ];
 
 export const facultySearchableFields = [
+  'searchTerm',
   'id',
+  'bloodGroup',
   'email',
   'contactNo',
-  'name.firstName',
-  'name.middleName',
-  'name.lastName',
+  'emergencyContactNo',
+  'designation',
 ];
