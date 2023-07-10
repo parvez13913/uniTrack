@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose';
+import { Schema, Types, model } from 'mongoose';
 import { gender } from './faculty.constant';
 import { FacultyModel, IFaculty } from './faculty.interface';
 
@@ -31,6 +31,10 @@ export const facultySchema = new Schema<IFaculty, FacultyModel>(
     dateOfBirth: {
       type: String,
     },
+    bloodGroup: {
+      type: String,
+      enum: ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'],
+    },
     contactNo: {
       type: String,
       required: true,
@@ -49,7 +53,16 @@ export const facultySchema = new Schema<IFaculty, FacultyModel>(
       type: String,
       required: true,
     },
-
+    academicDepartment: {
+      type: Types.ObjectId,
+      ref: 'AcademicDepartment',
+      required: true,
+    },
+    academicFaculty: {
+      type: Types.ObjectId,
+      ref: 'AcademicFaculty',
+      required: true,
+    },
     profileImage: {
       type: String,
     },

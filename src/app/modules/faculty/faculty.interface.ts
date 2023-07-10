@@ -1,4 +1,6 @@
-import { Model } from 'mongoose';
+import { Model, Types } from 'mongoose';
+import { IAcademicDepartment } from '../academicDepartment/academicDepartment.interface';
+import { IAcademicFaculty } from '../academicFaculty/academicFaculty.interface';
 
 export type FacultyName = {
   firstName: string;
@@ -12,8 +14,11 @@ export type IFaculty = {
   gender: string;
   dateOfBirth: string;
   contactNo: string;
+  bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
   email: string;
   emergencyContactNo: string;
+  academicDepartment: Types.ObjectId | IAcademicDepartment;
+  academicFaculty: Types.ObjectId | IAcademicFaculty;
   designation: string;
   profileImage?: string;
 };
