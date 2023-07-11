@@ -78,8 +78,23 @@ const getSingleDepartment = async (
   return result;
 };
 
+const updateDepartment = async (
+  id: string,
+  payload: Partial<IManagementDepartment>
+): Promise<IManagementDepartment | null> => {
+  const result = await ManagementDepartment.findByIdAndUpdate(
+    { _id: id },
+    payload,
+    {
+      new: true,
+    }
+  );
+  return result;
+};
+
 export const ManagementDepartmentService = {
   createDepartment,
   getAllDepartment,
   getSingleDepartment,
+  updateDepartment,
 };
