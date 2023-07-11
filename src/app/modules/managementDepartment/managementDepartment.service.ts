@@ -92,9 +92,17 @@ const updateDepartment = async (
   return result;
 };
 
+const deleteDepartment = async (
+  id: string
+): Promise<IManagementDepartment | null> => {
+  const result = await ManagementDepartment.findByIdAndDelete(id);
+  return result;
+};
+
 export const ManagementDepartmentService = {
   createDepartment,
   getAllDepartment,
   getSingleDepartment,
   updateDepartment,
+  deleteDepartment,
 };
