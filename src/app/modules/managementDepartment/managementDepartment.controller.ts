@@ -51,8 +51,25 @@ const getSingleDepartment = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const updateDepartment = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const { ...updateData } = req.body;
+  const result = await ManagementDepartmentService.updateDepartment(
+    id,
+    updateData
+  );
+
+  sendResponse<IManagementDepartment>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Management Departments update successfully',
+    data: result,
+  });
+});
+
 export const ManagementDepartmentController = {
   createDepartment,
   getAllDepartment,
   getSingleDepartment,
+  updateDepartment,
 };
