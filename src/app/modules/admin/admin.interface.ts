@@ -3,7 +3,7 @@ import { IManagementDepartment } from '../managementDepartment/managementDepartm
 
 type UserName = {
   firstName: string;
-  middleName: string;
+  middleName?: string;
   lastName: string;
 };
 
@@ -15,8 +15,8 @@ export type IAdmin = {
   emergencyContactNo: string;
   dateOfBirth?: string;
   gender?: 'male' | 'female';
-  permanentAddress?: string;
-  presentAddress?: string;
+  permanentAddress: string;
+  presentAddress: string;
   bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
 
   managementDepartment: Types.ObjectId | IManagementDepartment;
