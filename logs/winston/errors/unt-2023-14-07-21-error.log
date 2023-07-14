@@ -1,0 +1,2 @@
+Fri Jul 14 2023 21:29:32 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Fri Jul 14 2023 21:29:32 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
