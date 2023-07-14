@@ -62,6 +62,13 @@ const getAllAdmin = async (
   };
 };
 
+const getSingleAdmin = async (id: string): Promise<IAdmin | null> => {
+  const result = await Admin.findById(id).populate('managementDepartment');
+
+  return result;
+};
+
 export const AdminService = {
   getAllAdmin,
+  getSingleAdmin,
 };
