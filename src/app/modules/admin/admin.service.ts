@@ -1,9 +1,10 @@
 import httpStatus from 'http-status';
-import { SortOrder } from 'mongoose';
+import mongoose, { SortOrder } from 'mongoose';
 import ApiError from '../../../errors/ApiErrors';
 import { PaginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
+import { User } from '../user/user.model';
 import { adminSearchableFields } from './admin.constant';
 import { IAdmin, IAdminFilters } from './admin.interface';
 import { Admin } from './admin.model';
@@ -98,8 +99,38 @@ const updateAdmin = async (
   return result;
 };
 
+const deleteAdmin = async (id: string): Promise<IAdmin | null> => {
+  const isExit = await Admin.findOne({ id });
+
+  if (!isExit) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Admin not found');
+  }
+
+  const session = await mongoose.startSession();
+
+  try {
+    session.startTransaction();
+    // delete admin first
+    const admin = await Admin.findOneAndDelete({ id }, { session });
+    if (!admin) {
+      throw new ApiError(404, 'Failed to delete student');
+    }
+
+    // delete user
+    await User.deleteOne({ id });
+    session.commitTransaction();
+    session.endSession();
+
+    return admin;
+  } catch (error) {
+    session.abortTransaction();
+    throw error;
+  }
+};
+
 export const AdminService = {
   getAllAdmin,
   getSingleAdmin,
   updateAdmin,
+  deleteAdmin,
 };
