@@ -95,24 +95,23 @@ const updateFaculty = async (
 };
 
 const deleteFaculty = async (id: string): Promise<IFaculty | null> => {
-  const isExit = await Faculty.findOne({ id });
+  // check if the faculty is exist
+  const isExist = await Faculty.findOne({ id });
 
-  if (!isExit) {
-    throw new ApiError(httpStatus.NOT_FOUND, 'Faculty not Found');
+  if (!isExist) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'Faculty not found !');
   }
 
   const session = await mongoose.startSession();
 
   try {
     session.startTransaction();
-    // delete faculty first
+    //delete faculty first
     const faculty = await Faculty.findOneAndDelete({ id }, { session });
-
     if (!faculty) {
       throw new ApiError(404, 'Failed to delete faculty');
     }
-
-    // delete user
+    //delete user
     await User.deleteOne({ id });
     session.commitTransaction();
     session.endSession();

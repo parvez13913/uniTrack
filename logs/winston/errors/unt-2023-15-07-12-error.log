@@ -1,0 +1,11 @@
+Sat Jul 15 2023 12:2:57 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 12:2:57 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 12:8:10 [UniTrack] error: Transaction with { txnNumber: 1 } has been aborted.
+Sat Jul 15 2023 12:8:10 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_COMMITTED] to [TRANSACTION_ABORTED]
+Sat Jul 15 2023 12:8:10 [UniTrack] error: Transaction with { txnNumber: 1 } has been aborted.
+Sat Jul 15 2023 12:11:33 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 12:11:33 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 12:13:39 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 12:13:39 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 12:20:38 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 12:20:38 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]

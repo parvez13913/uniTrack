@@ -1,2 +1,6 @@
 Sat Jul 15 2023 11:54:13 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
 Sat Jul 15 2023 11:54:13 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 11:55:48 [UniTrack] error: Fail to connect database Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+Sat Jul 15 2023 11:58:44 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 11:58:44 [UniTrack] error: Attempted illegal state transition from [TRANSACTION_ABORTED] to [TRANSACTION_COMMITTED]
+Sat Jul 15 2023 11:59:36 [UniTrack] error: Fail to connect database connect ETIMEDOUT 15.206.13.116:27017
