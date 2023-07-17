@@ -2,179 +2,131 @@
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:05:52.370Z'
+  timestamp: '2023-07-17T14:01:51.434Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:05:52.391Z'
+  timestamp: '2023-07-17T14:01:51.459Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:20:39.349Z'
+  timestamp: '2023-07-17T14:02:27.273Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:20:39.368Z'
+  timestamp: '2023-07-17T14:02:27.306Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:20:50.195Z'
+  timestamp: '2023-07-17T14:03:52.440Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:20:50.207Z'
+  timestamp: '2023-07-17T14:03:52.479Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:22:39.032Z'
+  timestamp: '2023-07-17T14:04:52.317Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:22:39.047Z'
+  timestamp: '2023-07-17T14:04:52.343Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:23:45.229Z'
+  timestamp: '2023-07-17T14:17:51.946Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:23:45.244Z'
+  timestamp: '2023-07-17T14:17:51.971Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:24:39.045Z'
+  timestamp: '2023-07-17T14:19:37.458Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:24:39.062Z'
+  timestamp: '2023-07-17T14:19:37.479Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:25:09.902Z'
+  timestamp: '2023-07-17T14:20:38.743Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:25:09.917Z'
+  timestamp: '2023-07-17T14:20:38.767Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:31:42.600Z'
+  timestamp: '2023-07-17T14:21:09.330Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:31:42.628Z'
+  timestamp: '2023-07-17T14:21:09.356Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:31:57.891Z'
+  timestamp: '2023-07-17T14:21:38.749Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:31:57.911Z'
+  timestamp: '2023-07-17T14:21:38.780Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:32:43.180Z'
+  timestamp: '2023-07-17T14:28:40.284Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:32:43.220Z'
+  timestamp: '2023-07-17T14:28:40.310Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:32:59.174Z'
+  timestamp: '2023-07-17T14:29:22.911Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-07-17T06:32:59.187Z'
-}
-{
-  message: '🛢🛢Database is connected successfull',
-  level: 'info',
-  label: 'UniTrack',
-  timestamp: '2023-07-17T06:33:46.652Z'
-}
-{
-  message: 'Application listening on port 5000',
-  level: 'info',
-  label: 'UniTrack',
-  timestamp: '2023-07-17T06:33:46.664Z'
-}
-{
-  message: '🛢🛢Database is connected successfull',
-  level: 'info',
-  label: 'UniTrack',
-  timestamp: '2023-07-17T06:35:38.007Z'
-}
-{
-  message: 'Application listening on port 5000',
-  level: 'info',
-  label: 'UniTrack',
-  timestamp: '2023-07-17T06:35:38.023Z'
-}
-{
-  message: '🛢🛢Database is connected successfull',
-  level: 'info',
-  label: 'UniTrack',
-  timestamp: '2023-07-17T06:36:26.988Z'
-}
-{
-  message: 'Application listening on port 5000',
-  level: 'info',
-  label: 'UniTrack',
-  timestamp: '2023-07-17T06:36:27.003Z'
-}
-{
-  message: '🛢🛢Database is connected successfull',
-  level: 'info',
-  label: 'UniTrack',
-  timestamp: '2023-07-17T06:40:43.127Z'
-}
-{
-  message: 'Application listening on port 5000',
-  level: 'info',
-  label: 'UniTrack',
-  timestamp: '2023-07-17T06:40:43.141Z'
+  timestamp: '2023-07-17T14:29:22.948Z'
 }
