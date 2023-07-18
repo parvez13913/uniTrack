@@ -125,11 +125,11 @@ const deleteStudents = async (id: string): Promise<IStudent | null> => {
     throw new ApiError(httpStatus.NOT_FOUND, 'Student Not Found');
   }
   const session = await mongoose.startSession();
-
+  let newStudent = null;
   try {
     session.startTransaction();
     // Delete student first
-    const student = await Student.findOneAndDelete({ id }, { session });
+    const student = await Student.findOneAndDelete({ id }).session(session);
 
     if (!student) {
       throw new ApiError(404, 'Failed to delete student');
@@ -137,14 +137,15 @@ const deleteStudents = async (id: string): Promise<IStudent | null> => {
 
     // Delete User
     await User.deleteOne({ id });
-    session.commitTransaction();
-    session.endSession();
+    await session.commitTransaction();
+    await session.endSession();
 
-    return student;
+    newStudent = student;
   } catch (error) {
     session.abortTransaction();
     throw error;
   }
+  return newStudent;
 };
 export const StudentService = {
   getAllStudents,
