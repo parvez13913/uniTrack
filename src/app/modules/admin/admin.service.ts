@@ -107,25 +107,26 @@ const deleteAdmin = async (id: string): Promise<IAdmin | null> => {
   }
 
   const session = await mongoose.startSession();
-
+  let newAdmin = null;
   try {
     session.startTransaction();
     // delete admin first
-    const admin = await Admin.findOneAndDelete({ id }, { session });
+    const admin = await Admin.findOneAndDelete({ id }).session(session);
     if (!admin) {
       throw new ApiError(404, 'Failed to delete student');
     }
 
     // delete user
     await User.deleteOne({ id });
-    session.commitTransaction();
-    session.endSession();
+    await session.commitTransaction();
+    await session.endSession();
 
-    return admin;
+    newAdmin = admin;
   } catch (error) {
     session.abortTransaction();
     throw error;
   }
+  return newAdmin;
 };
 
 export const AdminService = {
