@@ -1,1 +1,1 @@
-# uniTrack
+# UniTrack: university-management-auth-service
