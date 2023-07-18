@@ -103,24 +103,25 @@ const deleteFaculty = async (id: string): Promise<IFaculty | null> => {
   }
 
   const session = await mongoose.startSession();
-
+  let newFaculty = null;
   try {
     session.startTransaction();
     //delete faculty first
-    const faculty = await Faculty.findOneAndDelete({ id }, { session });
+    const faculty = await Faculty.findOneAndDelete({ id }).session(session);
     if (!faculty) {
       throw new ApiError(404, 'Failed to delete faculty');
     }
     //delete user
     await User.deleteOne({ id });
-    session.commitTransaction();
-    session.endSession();
+    await session.commitTransaction();
+    await session.endSession();
 
-    return faculty;
+    newFaculty = faculty;
   } catch (error) {
     session.abortTransaction();
     throw error;
   }
+  return newFaculty;
 };
 
 export const FacultyService = {
