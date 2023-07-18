@@ -4,7 +4,11 @@ export type ILoginUser = {
 };
 
 export type ILoginUserResponse = {
-  needsPasswordChange: boolean;
   accessToken: string;
-  refreshToken: string;
+  refreshToken?: string;
+  needsPasswordChange: boolean;
+};
+
+export type IRefreshTokenResponse = {
+  accessToken: string;
 };
