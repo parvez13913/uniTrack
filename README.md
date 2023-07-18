@@ -2,4 +2,4 @@
 #Application Routes:
 
 ## Student 
-* api/v1/users/create-student
+* api/v1/users/create-student (POST)
