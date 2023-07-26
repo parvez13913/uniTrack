@@ -21,6 +21,7 @@ export type UserModel = {
     IUser,
     'id' | 'password' | 'needsPasswordChange' | 'role'
   > | null>;
+
   isPasswordMatched(
     givenPassword: string,
     savedPassword: string

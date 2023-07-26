@@ -68,6 +68,7 @@ const refreshToken = async (token: string): Promise<IRefreshTokenResponse> => {
     throw new ApiError(httpStatus.NOT_FOUND, 'User does not exist');
   }
 
+  // generate new token
   const newAccessToken = JwtHelpers.createToken(
     { id: isUserExist?.id, role: isUserExist?.role },
     config.jwt.secret as Secret,
