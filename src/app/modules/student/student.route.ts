@@ -1,17 +1,44 @@
 import express from 'express';
+import { ENUM_USER_ROLE } from '../../../enums/user';
+import auth from '../../middlewares/auth';
 import validateRequest from '../../middlewares/validateRequest';
 import { StudentController } from './student.controller';
 import { StudentValidation } from './student.validation';
 
 const router = express.Router();
 
-router.get('/:id', StudentController.getSingleStudents);
-router.get('/', StudentController.getAllStudents);
+router.get(
+  '/:id',
+  auth(
+    ENUM_USER_ROLE.SUPER_ADMIN,
+    ENUM_USER_ROLE.ADMIN,
+    ENUM_USER_ROLE.FACULTY,
+    ENUM_USER_ROLE.STUDENT
+  ),
+  StudentController.getSingleStudents
+);
+
 router.patch(
   '/:id',
+  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   validateRequest(StudentValidation.updateStudentZodSchema),
   StudentController.updateStudents
 );
-router.delete('/:id', StudentController.deleteStudents);
+router.delete(
+  '/:id',
+  auth(ENUM_USER_ROLE.SUPER_ADMIN),
+  StudentController.deleteStudents
+);
+
+router.get(
+  '/',
+  auth(
+    ENUM_USER_ROLE.SUPER_ADMIN,
+    ENUM_USER_ROLE.ADMIN,
+    ENUM_USER_ROLE.FACULTY,
+    ENUM_USER_ROLE.STUDENT
+  ),
+  StudentController.getAllStudents
+);
 
 export const StudentsRoutes = router;
