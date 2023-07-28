@@ -6,81 +6,6 @@
     "auditLog": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\.1d7f3f3c6e8812f79b8ccde9f206e43414ddbb6e-audit.json",
     "files": [
         {
-            "date": 1688983036963,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-10-07-15-error.log",
-            "hash": "5e8cb2a2a563bf66792a06579c98907bbce3e0a62d3ee633530815a0d9c245b8"
-        },
-        {
-            "date": 1688983724757,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-10-07-16-error.log",
-            "hash": "f3b275e19f56298f88e539d03f885c2ab472cfb9dd2e4099795408105122a28c"
-        },
-        {
-            "date": 1688991875733,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-10-07-18-error.log",
-            "hash": "3a43bc8477363a8729e610adef334de737d8b78c66a9277eb6ea75d32c44dd2e"
-        },
-        {
-            "date": 1688995469305,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-10-07-19-error.log",
-            "hash": "0056c0ecbeeb35af62d1d5ac8361c63c03ecdb49c2844540ef02fb3dabc37be8"
-        },
-        {
-            "date": 1688997659909,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-10-07-20-error.log",
-            "hash": "d79f40ec1062ed74e4f66756bc398a75f696e3c370935ae80d29fef65c1349bf"
-        },
-        {
-            "date": 1689088613604,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-11-07-21-error.log",
-            "hash": "dab55b90c120e7581d747170f8e41101ec7e45718ba38c4622e9581dd4913e83"
-        },
-        {
-            "date": 1689091243633,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-11-07-22-error.log",
-            "hash": "b0b531965935a3773d89817840e4a2c5b3ba9cf1034ae7b113fb152c021c10d9"
-        },
-        {
-            "date": 1689156147749,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-12-07-16-error.log",
-            "hash": "f86c5474b817ebdac7b008a9751826cd1b7804fbd4270a41f25f2b31c8a307c5"
-        },
-        {
-            "date": 1689160172212,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-12-07-17-error.log",
-            "hash": "b9e0f41bc9752bdfabeac9ff4a240f13afdd555bb06039db53c9a5fd0a7c13eb"
-        },
-        {
-            "date": 1689251285430,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-13-07-18-error.log",
-            "hash": "90398d1725c270edc324bbd3375c8e4b5353e0a360eb74036c74e24b881973ac"
-        },
-        {
-            "date": 1689253200499,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-13-07-19-error.log",
-            "hash": "ad7fdd4a8fdfd05cc575f496bcc1ea783551dd3b916361832b10a1db3e5819c8"
-        },
-        {
-            "date": 1689258415347,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-13-07-20-error.log",
-            "hash": "6dc51fd23811cd27a419b114024bba19d2a5f3b88cd3c15e89c4f95653760e14"
-        },
-        {
-            "date": 1689260507748,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-13-07-21-error.log",
-            "hash": "d13a39b0b6c3cc4d6102621ac32163a4b3d8e77445a85f3b9dd7b6b39e671e51"
-        },
-        {
-            "date": 1689265034589,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-13-07-22-error.log",
-            "hash": "85d70d373b15ed76e95665075b371bb10b41a382f1ad34657870313c81c90a5f"
-        },
-        {
-            "date": 1689322364352,
-            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-14-07-14-error.log",
-            "hash": "a249346a535cfc5b254c7c5cbfe78196807b2802bd9ab31616c2cfda31ef8480"
-        },
-        {
             "date": 1689346428007,
             "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-14-07-20-error.log",
             "hash": "90d8cbac08028c9b1440c71af2bac6c6403b281cfca313d4ff141218c3f96688"
@@ -194,6 +119,16 @@
             "date": 1689681608676,
             "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-18-07-18-error.log",
             "hash": "4e80355d750084aa31acf0fd25a2ee4af8dfb7a3fe36ef95e480c099c11ccabe"
+        },
+        {
+            "date": 1690539715517,
+            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-28-07-16-error.log",
+            "hash": "dc734c02bc2e02331db851df263e0e4bf8ebec2aff8aa7bbcc283b2af52a2ed8"
+        },
+        {
+            "date": 1690542063880,
+            "name": "C:\\level-2\\uniTrack\\logs\\winston\\errors\\unt-2023-28-07-17-error.log",
+            "hash": "e945bc5a875bdca8d391faa1c26d81c3f3a8674390a1641748f35a53c340fa3e"
         }
     ],
     "hashType": "sha256"

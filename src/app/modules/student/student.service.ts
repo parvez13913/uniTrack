@@ -65,7 +65,7 @@ const getAllStudents = async (
 };
 
 const getSingleStudents = async (id: string): Promise<IStudent | null> => {
-  const result = await Student.findOne({ id })
+  const result = await Student.findOne({ _id: id })
     .populate('academicSemester')
     .populate('academicDepartment')
     .populate('academicFaculty');
