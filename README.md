@@ -1,4 +1,4 @@
-# UniTrack: university-management-auth-service
+# UniTrack: University Management Auth Service
 
 # Application Routes:
 
