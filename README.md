@@ -1,6 +1,13 @@
 # UniTrack: University Management Auth Service
 
-# Application Routes:
+# Application Routes
+
+## Admin
+* api/v1/users/create-admin (POST)
+* api/v1/admins (GET)
+* api/v1/admins/A-00001 (Single GET)
+* api/v1/admins/A-00001 (PATCH)
+* api/v1/admins/A-00001 (DELETE)
 
 ## Student 
 * api/v1/users/create-student (POST)
