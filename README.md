@@ -2,6 +2,11 @@
 
 # Application Routes
 
+## Login
+* api/v1/auth/login (POST)
+* api/v1/auth/change-password (POST) [Change Password]
+* api/v1/auth/refresh-token (POST) [Get Refresh Token]
+
 ## Admin
 * api/v1/users/create-admin (POST)
 * api/v1/admins (GET)
