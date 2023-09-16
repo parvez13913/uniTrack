@@ -11,3 +11,7 @@
 
 ## Faculty
 * api/v1/users/create-faculty (POST)
+* api/v1/faculties (GET)
+* api/v1/faculties/F-00002 (Single GET)
+* api/v1/faculties/F-00002 (PATCH)
+* api/v1/faculties/F-00002 (DELETE)
