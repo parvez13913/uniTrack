@@ -22,3 +22,10 @@
 * api/v1/faculties/F-00002 (Single GET)
 * api/v1/faculties/F-00002 (PATCH)
 * api/v1/faculties/F-00002 (DELETE)
+
+## Academic Faculty 
+* api/v1/academic-faculties/create-faculty (POST)
+* api/v1/academic-faculties (GET)
+* api/v1/academic-faculties/6487d5be94ac190809515826 (Single GET)
+* api/v1/academic-faculties/6487d5be94ac190809515826 (PATCH)
+* api/v1/academic-faculties/6487d5be94ac190809515826 (DELETE)
