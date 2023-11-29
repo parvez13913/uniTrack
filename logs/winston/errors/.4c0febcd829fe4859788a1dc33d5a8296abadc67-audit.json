@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\errors\\.4c0febcd829fe4859788a1dc33d5a8296abadc67-audit.json",
+    "files": [
+        {
+            "date": 1700577005350,
+            "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\errors\\unt-2023-21-11-20-error.log",
+            "hash": "ce99788a22c3ca96298d4d3a43f2cf8c704576bab58364866bce4504fc2dd5ed"
+        },
+        {
+            "date": 1700630465924,
+            "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\errors\\unt-2023-22-11-11-error.log",
+            "hash": "8951584415e288776b5f7d250fdaa9b04bd6c58fa43fa01f49fc399511c393c9"
+        },
+        {
+            "date": 1701256593441,
+            "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\errors\\unt-2023-29-11-17-error.log",
+            "hash": "3d5d4c7ea7b44c137f1c4803e608d760308a427c801689777152f6b477ab2a31"
+        }
+    ],
+    "hashType": "sha256"
+}

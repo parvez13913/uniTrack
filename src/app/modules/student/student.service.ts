@@ -65,7 +65,7 @@ const getAllStudents = async (
 };
 
 const getSingleStudents = async (id: string): Promise<IStudent | null> => {
-  const result = await Student.findOne({ _id: id })
+  const result = await Student.findOne({ id: id })
     .populate('academicSemester')
     .populate('academicDepartment')
     .populate('academicFaculty');
@@ -77,7 +77,7 @@ const updateStudents = async (
   id: string,
   payload: Partial<IStudent>
 ): Promise<IStudent | null> => {
-  const isExit = await Student.findOne({ _id: id });
+  const isExit = await Student.findOne({ id: id });
   if (!isExit) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Student not found');
   }
@@ -119,7 +119,7 @@ const updateStudents = async (
 };
 
 const deleteStudents = async (id: string): Promise<IStudent | null> => {
-  const isExit = await Student.findOne({ _id: id });
+  const isExit = await Student.findOne({ id: id });
 
   if (!isExit) {
     throw new ApiError(httpStatus.NOT_FOUND, 'Student Not Found');

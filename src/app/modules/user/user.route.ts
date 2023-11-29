@@ -22,7 +22,7 @@ router.post(
 );
 router.post(
   '/create-admin',
-  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
+  // auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   validateRequest(UserValidation.createAdminZodSchema),
   UserController.createAdmin
 );
