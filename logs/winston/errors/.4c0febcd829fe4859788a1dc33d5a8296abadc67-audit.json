@@ -24,6 +24,26 @@
             "date": 1701262240138,
             "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\errors\\unt-2023-29-11-18-error.log",
             "hash": "adf12495d2d8f10ba012a768a7989e79f4bdcbf954c02cac77670eaa0aff68b1"
+        },
+        {
+            "date": 1701433604507,
+            "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\errors\\unt-2023-01-12-18-error.log",
+            "hash": "1f000f5a3e3e3264b08cdc0fd2670aa79122cb5ac617cd7ae353eacf92011d03"
+        },
+        {
+            "date": 1701439933034,
+            "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\errors\\unt-2023-01-12-20-error.log",
+            "hash": "9d35bb55b4db6b5d2366d21bfb61b4b076d29da7158f44ec872eb8fef937a26b"
+        },
+        {
+            "date": 1701453177929,
+            "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\errors\\unt-2023-01-12-23-error.log",
+            "hash": "bbb386531693da056df14baeb5aea2063c156173f7bd13f33de65db0112b5f0b"
+        },
+        {
+            "date": 1701453706151,
+            "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\errors\\unt-2023-02-12-00-error.log",
+            "hash": "a07ca1e8183a6a1b1634b84bb0cc1a0a44e14c26d34c32bade1effaaacacedfd"
         }
     ],
     "hashType": "sha256"
