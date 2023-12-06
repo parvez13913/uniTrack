@@ -1,6 +1,7 @@
 import { RedisClient } from '../../../shared/redis';
 import {
   EVENT_ACADEMIC_SEMESTER_CREATED,
+  EVENT_ACADEMIC_SEMESTER_DELETED,
   EVENT_ACADEMIC_SEMESTER_UPDATED,
 } from './academicSemester.constant';
 import { IAcademicSemesterCreateEvent } from './academicSemester.interface';
@@ -22,6 +23,15 @@ const initAcademicSemesterEvents = () => {
     async (event: string) => {
       const data = JSON.parse(event);
       await AcademicSemesterService.updateSemesterFromEvent(data);
+    }
+  );
+
+  // delete
+  RedisClient.subscribe(
+    EVENT_ACADEMIC_SEMESTER_DELETED,
+    async (event: string) => {
+      const data = JSON.parse(event);
+      await AcademicSemesterService.deleteSemesterFromEvent(data);
     }
   );
 };
