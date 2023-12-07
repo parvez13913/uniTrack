@@ -6,6 +6,7 @@ import { AcademicFaculty } from '../academicFaculty/academicFaculty.model';
 import { academicDepartmentSearchableFields } from './academicDepartment.constants';
 import {
   AcademicDepartmentCreatedEvent,
+  AcademicDepartmentUpdatedEvent,
   IAcademicDepartment,
   IAcademicDepartmentFilters,
 } from './academicDepartment.interface';
@@ -116,6 +117,26 @@ const createAcademicDepartmentFromEvent = async (
   await AcademicDepartment.create(payload);
 };
 
+const updatedAcademicDepartmentFromEvent = async (
+  event: AcademicDepartmentUpdatedEvent
+) => {
+  const academicFaculty = AcademicFaculty.findOne({
+    syncId: event.academicFacultyId,
+  });
+
+  const payload = {
+    title: event.title,
+    academicFaculty: academicFaculty?._id,
+  };
+
+  await AcademicDepartment.findOneAndUpdate(
+    { syncId: event.id },
+    {
+      $set: payload,
+    }
+  );
+};
+
 export const AcademicDepartmentService = {
   createDepartment,
   getAllDepartment,
@@ -123,4 +144,5 @@ export const AcademicDepartmentService = {
   updateDepartment,
   deleteDepartment,
   createAcademicDepartmentFromEvent,
+  updatedAcademicDepartmentFromEvent,
 };
