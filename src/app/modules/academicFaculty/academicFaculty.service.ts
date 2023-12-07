@@ -115,6 +115,12 @@ const updateAcademicFacultyFromEvent = async (
   );
 };
 
+const deleteAcademicFacultyFromEvent = async (
+  syncId: string
+): Promise<void> => {
+  await AcademicFaculty.findOneAndDelete({ syncId });
+};
+
 export const AcademicFacultyService = {
   createFaculty,
   getAllFaculties,
@@ -123,4 +129,5 @@ export const AcademicFacultyService = {
   deleteFaculty,
   createAcademicFacultyFromEvent,
   updateAcademicFacultyFromEvent,
+  deleteAcademicFacultyFromEvent,
 };
