@@ -1,5 +1,8 @@
 import { RedisClient } from '../../../shared/redis';
-import { EVENT_ACADEMIC_FACULTY_CREATED } from './academicFaculty.constants';
+import {
+  EVENT_ACADEMIC_FACULTY_CREATED,
+  EVENT_ACADEMIC_FACULTY_UPDATED,
+} from './academicFaculty.constants';
 import { AcademicFacultyCreatedEvent } from './academicFaculty.interface';
 import { AcademicFacultyService } from './academicFaculty.service';
 
@@ -10,6 +13,15 @@ const initAcademicFacultyEvents = () => {
       const data: AcademicFacultyCreatedEvent = JSON.parse(event);
 
       await AcademicFacultyService.createAcademicFacultyFromEvent(data);
+    }
+  );
+
+  RedisClient.subscribe(
+    EVENT_ACADEMIC_FACULTY_UPDATED,
+    async (event: string) => {
+      const data: AcademicFacultyCreatedEvent = JSON.parse(event);
+
+      await AcademicFacultyService.updateAcademicFacultyFromEvent(data);
     }
   );
 };
