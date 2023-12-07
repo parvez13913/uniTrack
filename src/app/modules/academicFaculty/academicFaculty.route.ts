@@ -7,13 +7,6 @@ import { AcademicFacultyValidation } from './academicFaculty.validation';
 
 const router = express.Router();
 
-router.post(
-  '/create-faculty',
-  validateRequest(AcademicFacultyValidation.createFacultyZodSchema),
-  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  AcademicFacultyController.createFaculty
-);
-
 router.get(
   '/',
   auth(
@@ -24,6 +17,7 @@ router.get(
   ),
   AcademicFacultyController.getAllFaculties
 );
+
 router.get(
   '/:id',
   auth(
@@ -34,6 +28,14 @@ router.get(
   ),
   AcademicFacultyController.getSingleFaculty
 );
+
+router.post(
+  '/',
+  validateRequest(AcademicFacultyValidation.createFacultyZodSchema),
+  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
+  AcademicFacultyController.createFaculty
+);
+
 router.patch(
   '/:id',
   validateRequest(AcademicFacultyValidation.updateFacultyZodSchema),
