@@ -108,6 +108,7 @@ const createAcademicDepartmentFromEvent = async (
   const academicFaculty = await AcademicFaculty.findOne({
     syncId: event.academicFacultyId,
   });
+
   const payload = {
     title: event.title,
     academicFaculty: academicFaculty?._id,

@@ -13,19 +13,19 @@ router.get('/:id', AcademicDepartmentController.getSingleDepartment);
 
 router.post(
   '/',
-  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   validateRequest(
     AcademicDepartmentValidation.createAcademicDepartmentZodSchema
   ),
+  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   AcademicDepartmentController.createDepartment
 );
 
 router.patch(
   '/:id',
-  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   validateRequest(
     AcademicDepartmentValidation.updateAcademicDepartmentZodSchema
   ),
+  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   AcademicDepartmentController.updateDepartment
 );
 
