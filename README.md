@@ -36,11 +36,11 @@
 * api/v1/academic-faculties/6487d5be94ac190809515826 (DELETE)
 
 ## Academic Semester
-* api/v1/academic-semesters/create-semester (POST)
-* api/v1/academic-semesters (GET)
-* api/v1/academic-semesters/6505d075ee3b2fd9a28c92af (Single GET)
-* api/v1/academic-semesters/6505d075ee3b2fd9a28c92af (PATCH)
-* api/v1/academic-semesters/6505d075ee3b2fd9a28c92af (DELETE)
+* api/v1/academicSemesters (POST)
+* api/v1/academicSemesters (GET)
+* api/v1/academicSemesters/6505d075ee3b2fd9a28c92af (Single GET)
+* api/v1/academicSemesters/6505d075ee3b2fd9a28c92af (PATCH)
+* api/v1/academicSemesters/6505d075ee3b2fd9a28c92af (DELETE)
 
 ## Academic Department
 * api/v1/academic-department/create-department (POST)
