@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import config from '../../../config';
 import ApiError from '../../../errors/ApiErrors';
 import { IAcademicSemester } from '../academicSemester/academicSemester.interface';
-import { AcamemicSemester } from '../academicSemester/academicSemester.model';
+import { AcademicSemester } from '../academicSemester/academicSemester.model';
 import { IAdmin } from '../admin/admin.interface';
 import { Admin } from '../admin/admin.model';
 import { IFaculty } from '../faculty/faculty.interface';
@@ -30,7 +30,7 @@ const createStudent = async (
   // set role
   user.role = 'student';
 
-  const academicSemester = await AcamemicSemester.findById(
+  const academicSemester = await AcademicSemester.findById(
     student.academicSemester
   ).lean();
 
