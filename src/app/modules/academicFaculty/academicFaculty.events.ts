@@ -16,7 +16,6 @@ const initAcademicFacultyEvents = () => {
     EVENT_ACADEMIC_FACULTY_CREATED,
     async (event: string) => {
       const data: AcademicFacultyCreatedEvent = JSON.parse(event);
-
       await AcademicFacultyService.createAcademicFacultyFromEvent(data);
     }
   );

@@ -1,5 +1,0 @@
-Thu Dec 07 2023 19:48:36 [UniTrack] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Thu Dec 07 2023 19:49:33 [UniTrack] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Thu Dec 07 2023 19:50:23 [UniTrack] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Thu Dec 07 2023 19:53:50 [UniTrack] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
-Thu Dec 07 2023 19:56:10 [UniTrack] error: AcademicDepartment validation failed: academicFaculty: Path `academicFaculty` is required.
