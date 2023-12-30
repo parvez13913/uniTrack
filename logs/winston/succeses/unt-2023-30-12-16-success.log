@@ -2,35 +2,35 @@
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-12-05T09:34:46.882Z'
+  timestamp: '2023-12-30T10:00:54.441Z'
 }
 {
   message: 'Application listening on port 3001',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-12-05T09:34:46.896Z'
+  timestamp: '2023-12-30T10:00:54.455Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-12-05T09:39:00.446Z'
+  timestamp: '2023-12-30T10:02:50.346Z'
 }
 {
   message: 'Application listening on port 3001',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-12-05T09:39:00.477Z'
+  timestamp: '2023-12-30T10:02:50.364Z'
 }
 {
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-12-05T09:40:14.547Z'
+  timestamp: '2023-12-30T10:02:56.678Z'
 }
 {
   message: 'Application listening on port 3001',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-12-05T09:40:14.579Z'
+  timestamp: '2023-12-30T10:02:56.694Z'
 }

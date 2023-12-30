@@ -2,11 +2,11 @@
   message: '🛢🛢Database is connected successfull',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-12-05T12:27:08.130Z'
+  timestamp: '2023-12-30T07:45:18.935Z'
 }
 {
   message: 'Application listening on port 3001',
   level: 'info',
   label: 'UniTrack',
-  timestamp: '2023-12-05T12:27:08.181Z'
+  timestamp: '2023-12-30T07:45:18.967Z'
 }
