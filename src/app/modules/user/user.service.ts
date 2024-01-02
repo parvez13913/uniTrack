@@ -2,6 +2,7 @@ import httpStatus from 'http-status';
 import mongoose from 'mongoose';
 import config from '../../../config';
 import ApiError from '../../../errors/ApiErrors';
+import { RedisClient } from '../../../shared/redis';
 import { IAcademicSemester } from '../academicSemester/academicSemester.interface';
 import { AcademicSemester } from '../academicSemester/academicSemester.model';
 import { IAdmin } from '../admin/admin.interface';
@@ -10,6 +11,7 @@ import { IFaculty } from '../faculty/faculty.interface';
 import { Faculty } from '../faculty/faculty.model';
 import { IStudent } from '../student/student.interface';
 import { Student } from '../student/student.model';
+import { EVENT_STUDENT_CREATED } from './user.constants';
 import { IUser } from './user.interface';
 import { User } from './user.model';
 import {
@@ -84,6 +86,14 @@ const createStudent = async (
       ],
     });
   }
+
+  if (newUserAllData) {
+    await RedisClient.publish(
+      EVENT_STUDENT_CREATED,
+      JSON.stringify(newUserAllData.student)
+    );
+  }
+
   return newUserAllData;
 };
 
