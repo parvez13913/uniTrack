@@ -163,16 +163,18 @@ const createAdminZodSchema = z.object({
         required_error: 'Emergency ContactNo is required',
       }),
       dateOfBirth: z.string().optional(),
-      gender: z.enum(['male', 'female']).optional(),
+      gender: z.string({
+        required_error: 'Gender is required',
+      }),
       permanentAddress: z.string({
         required_error: 'permanentAddress is required',
       }),
       presentAddress: z.string({
         required_error: 'PresentAddress is required',
       }),
-      bloodGroup: z
-        .enum(['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'])
-        .optional(),
+      bloodGroup: z.string({
+        required_error: 'Blood group is required',
+      }),
       managementDepartment: z.string({
         required_error: 'Management Department is required',
       }),
