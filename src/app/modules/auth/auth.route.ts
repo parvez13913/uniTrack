@@ -12,20 +12,22 @@ router.post(
   validateRequest(AuthValidation.loginZodSchema),
   AuthController.loginUser
 );
+
 router.post(
-  '/refresh-token',
+  '/refreshToken',
   validateRequest(AuthValidation.refreshTokenZodSchema),
   AuthController.refreshToken
 );
+
 router.post(
-  '/change-password',
+  '/changePassword',
+  validateRequest(AuthValidation.changePasswordZodSchema),
   auth(
     ENUM_USER_ROLE.ADMIN,
     ENUM_USER_ROLE.FACULTY,
     ENUM_USER_ROLE.STUDENT,
     ENUM_USER_ROLE.SUPER_ADMIN
   ),
-  validateRequest(AuthValidation.changePasswordZodSchema),
   AuthController.changePassword
 );
 
