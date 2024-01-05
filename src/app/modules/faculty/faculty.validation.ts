@@ -3,11 +3,13 @@ import { gender } from './faculty.constant';
 
 const updateFacultyZodSchema = z.object({
   body: z.object({
-    name: z.object({
-      firstName: z.string().optional(),
-      middleName: z.string().optional(),
-      lastName: z.string().optional(),
-    }),
+    name: z
+      .object({
+        firstName: z.string().optional(),
+        middleName: z.string().optional(),
+        lastName: z.string().optional(),
+      })
+      .optional(),
     gender: z.enum([...gender] as [string, ...string[]]).optional(),
     dateOfBirth: z.string().optional(),
     contactNo: z.string().optional(),

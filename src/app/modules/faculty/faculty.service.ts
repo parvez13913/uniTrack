@@ -4,8 +4,12 @@ import ApiError from '../../../errors/ApiErrors';
 import { PaginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
+import { RedisClient } from '../../../shared/redis';
 import { User } from '../user/user.model';
-import { facultySearchableFields } from './faculty.constant';
+import {
+  EVENT_FACULTY_UPDATED,
+  facultySearchableFields,
+} from './faculty.constant';
 import { IFaculty, IFacultyfilters } from './faculty.interface';
 import { Faculty } from './faculty.model';
 
@@ -90,6 +94,10 @@ const updateFaculty = async (
   const result = await Faculty.findOneAndUpdate({ id }, updatedFacultyData, {
     new: true,
   });
+
+  if (result) {
+    RedisClient.publish(EVENT_FACULTY_UPDATED, JSON.stringify(result));
+  }
 
   return result;
 };
