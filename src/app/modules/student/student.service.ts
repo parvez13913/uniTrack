@@ -4,8 +4,12 @@ import ApiError from '../../../errors/ApiErrors';
 import { PaginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
+import { RedisClient } from '../../../shared/redis';
 import { User } from '../user/user.model';
-import { studentSearchableFields } from './student.constants';
+import {
+  EVENT_STUDENT_UPDATED,
+  studentSearchableFields,
+} from './student.constants';
 import { IStudent, IStudentsFilters } from './student.interface';
 import { Student } from './student.model';
 
@@ -95,7 +99,9 @@ const updateStudents = async (
   }
   if (guardian && Object.keys(guardian).length > 0) {
     Object.keys(guardian).forEach(key => {
-      const guardianKey = `guardian.${key}` as keyof Partial<IStudent>; // `guardian.fisrtguardian`
+      const guardianKey = `guardian.${key}` as keyof Partial<IStudent>;
+
+      // `guardian.fisrtguardian`
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (updatedStudentData as any)[guardianKey] =
         guardian[key as keyof typeof guardian];
@@ -104,7 +110,9 @@ const updateStudents = async (
   if (localGuardian && Object.keys(localGuardian).length > 0) {
     Object.keys(localGuardian).forEach(key => {
       const localGuardianKey =
-        `localGuardian.${key}` as keyof Partial<IStudent>; // `localGuardian.fisrtlocalGuardian`
+        `localGuardian.${key}` as keyof Partial<IStudent>;
+
+      // `localGuardian.fisrtlocalGuardian`
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (updatedStudentData as any)[localGuardianKey] =
         localGuardian[key as keyof typeof localGuardian];
@@ -114,6 +122,10 @@ const updateStudents = async (
   const result = await Student.findOneAndUpdate({ id }, updatedStudentData, {
     new: true,
   });
+
+  if (result) {
+    RedisClient.publish(EVENT_STUDENT_UPDATED, JSON.stringify(result));
+  }
 
   return result;
 };
