@@ -130,7 +130,7 @@ const updateStudents = async (
   return result;
 };
 
-const deleteStudents = async (id: string): Promise<IStudent | null> => {
+const deleteStudent = async (id: string): Promise<IStudent | null> => {
   const isExit = await Student.findOne({ id: id });
 
   if (!isExit) {
@@ -162,6 +162,6 @@ const deleteStudents = async (id: string): Promise<IStudent | null> => {
 export const StudentService = {
   getAllStudents,
   getSingleStudents,
-  deleteStudents,
+  deleteStudent,
   updateStudents,
 };

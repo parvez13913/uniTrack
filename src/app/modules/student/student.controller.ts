@@ -50,9 +50,9 @@ const updateStudents = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-const deleteStudents = catchAsync(async (req: Request, res: Response) => {
+const deleteStudent = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
-  const result = await StudentService.deleteStudents(id);
+  const result = await StudentService.deleteStudent(id);
 
   sendResponse<IStudent>(res, {
     statusCode: httpStatus.OK,
@@ -65,6 +65,6 @@ const deleteStudents = catchAsync(async (req: Request, res: Response) => {
 export const StudentController = {
   getAllStudents,
   getSingleStudents,
-  deleteStudents,
+  deleteStudent,
   updateStudents,
 };
