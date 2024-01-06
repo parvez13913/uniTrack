@@ -27,7 +27,7 @@ router.patch(
 router.delete(
   '/:id',
   auth(ENUM_USER_ROLE.SUPER_ADMIN),
-  StudentController.deleteStudents
+  StudentController.deleteStudent
 );
 
 router.get(
