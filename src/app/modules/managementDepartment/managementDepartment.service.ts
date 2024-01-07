@@ -16,7 +16,7 @@ const createDepartment = async (
   return result;
 };
 
-const getAllDepartment = async (
+const getAllDepartments = async (
   filters: IManagementDepartmentFilters,
   paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IManagementDepartment[]>> => {
@@ -101,7 +101,7 @@ const deleteDepartment = async (
 
 export const ManagementDepartmentService = {
   createDepartment,
-  getAllDepartment,
+  getAllDepartments,
   getSingleDepartment,
   updateDepartment,
   deleteDepartment,

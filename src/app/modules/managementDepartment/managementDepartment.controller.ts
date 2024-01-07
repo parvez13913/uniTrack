@@ -22,10 +22,10 @@ const createDepartment = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-const getAllDepartment = catchAsync(async (req: Request, res: Response) => {
+const getAllDepartments = catchAsync(async (req: Request, res: Response) => {
   const filters = pick(req.query, managementDepartmentFilterableFields);
   const paginationOptions = pick(req.query, paginationFields);
-  const result = await ManagementDepartmentService.getAllDepartment(
+  const result = await ManagementDepartmentService.getAllDepartments(
     filters,
     paginationOptions
   );
@@ -81,7 +81,7 @@ const deleteDepartment = catchAsync(async (req: Request, res: Response) => {
 
 export const ManagementDepartmentController = {
   createDepartment,
-  getAllDepartment,
+  getAllDepartments,
   getSingleDepartment,
   updateDepartment,
   deleteDepartment,
