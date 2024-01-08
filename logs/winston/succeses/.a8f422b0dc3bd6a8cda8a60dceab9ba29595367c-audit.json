@@ -129,6 +129,16 @@
             "date": 1704632671575,
             "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\succeses\\unt-2024-07-01-19-success.log",
             "hash": "cb0437f2cf8ce35580a45f3cfaba62482ea9151e39f1d91624758338e4d05a2e"
+        },
+        {
+            "date": 1704718374678,
+            "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\succeses\\unt-2024-08-01-18-success.log",
+            "hash": "f2ec7a1eb76a71ef85cd6ca0f2d2df05e1df5fde74e19c0b5463b3fd69660c90"
+        },
+        {
+            "date": 1704718800979,
+            "name": "C:\\level-2\\uniTrack-auth-service\\logs\\winston\\succeses\\unt-2024-08-01-19-success.log",
+            "hash": "2c2f0d02e0e08612eb4f3beeb045c767c0d4af5ba772e39993f03e42500daf7e"
         }
     ],
     "hashType": "sha256"
