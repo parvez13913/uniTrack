@@ -7,6 +7,7 @@ const createManagementDepartmentZodSchema = z.object({
     }),
   }),
 });
+
 const updateManagementDepartmentZodSchema = z.object({
   body: z.object({
     title: z.string({
