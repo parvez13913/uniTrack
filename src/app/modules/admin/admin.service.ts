@@ -9,7 +9,7 @@ import { adminSearchableFields } from './admin.constant';
 import { IAdmin, IAdminFilters } from './admin.interface';
 import { Admin } from './admin.model';
 
-const getAllAdmin = async (
+const getAllAdmins = async (
   filters: IAdminFilters,
   paginationOption: IPaginationOptions
 ): Promise<IGenericResponse<IAdmin[]>> => {
@@ -130,7 +130,7 @@ const deleteAdmin = async (id: string): Promise<IAdmin | null> => {
 };
 
 export const AdminService = {
-  getAllAdmin,
+  getAllAdmins,
   getSingleAdmin,
   updateAdmin,
   deleteAdmin,
