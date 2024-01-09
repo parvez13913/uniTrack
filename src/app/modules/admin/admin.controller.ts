@@ -8,11 +8,11 @@ import { adminFilterableFields } from './admin.constant';
 import { IAdmin } from './admin.interface';
 import { AdminService } from './admin.service';
 
-const getAllAdmin = catchAsync(async (req: Request, res: Response) => {
+const getAllAdmins = catchAsync(async (req: Request, res: Response) => {
   const filters = pick(req.query, adminFilterableFields);
   const paginationOption = pick(req.query, paginationFields);
 
-  const result = await AdminService.getAllAdmin(filters, paginationOption);
+  const result = await AdminService.getAllAdmins(filters, paginationOption);
 
   sendResponse<IAdmin[]>(res, {
     statusCode: httpStatus.OK,
@@ -61,7 +61,7 @@ const deleteAdmin = catchAsync(async (req: Request, res: Response) => {
 });
 
 export const AdminController = {
-  getAllAdmin,
+  getAllAdmins,
   getSingleAdmin,
   updateAdmin,
   deleteAdmin,

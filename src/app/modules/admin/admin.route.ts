@@ -10,7 +10,7 @@ const router = express.Router();
 router.get(
   '/',
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  AdminController.getAllAdmin
+  AdminController.getAllAdmins
 );
 router.get(
   '/:id',
