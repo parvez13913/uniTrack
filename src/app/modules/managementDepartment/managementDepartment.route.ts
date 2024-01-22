@@ -31,19 +31,20 @@ router.get(
 
 router.post(
   '/createDepartment',
-  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
+
   validateRequest(
     ManagementDepartmentValidation.createManagementDepartmentZodSchema
   ),
+  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   ManagementDepartmentController.createDepartment
 );
 
 router.patch(
   '/:id',
-  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   validateRequest(
     ManagementDepartmentValidation.updateManagementDepartmentZodSchema
   ),
+  auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   ManagementDepartmentController.updateDepartment
 );
 
