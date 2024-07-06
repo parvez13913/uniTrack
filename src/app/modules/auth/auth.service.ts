@@ -1,8 +1,12 @@
 import httpStatus from 'http-status';
 import { JwtPayload, Secret } from 'jsonwebtoken';
 import config from '../../../config';
+import { ENUM_USER_ROLE } from '../../../enums/user';
 import ApiError from '../../../errors/ApiErrors';
 import { JwtHelpers } from '../../../helpers/jwtHelpers';
+import { Admin } from '../admin/admin.model';
+import { Faculty } from '../faculty/faculty.model';
+import { Student } from '../student/student.model';
 import { User } from '../user/user.model';
 import {
   IChangePassword,
@@ -125,8 +129,42 @@ const changePassword = async (
   await User.findOneAndUpdate({ id: user?.userId }, updatedData);*/
 };
 
+const forgotPassword = async (payload: { id: string }) => {
+  const user = await User.findOne({ id: payload?.id }, { id: 1, role: 1 });
+  if (!user) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'User does not exist!');
+  };
+
+  let profile = null;
+
+  if (user?.role === ENUM_USER_ROLE.ADMIN) {
+    profile = await Admin.findOne({ id: user?.id });
+  } else if (user?.role === ENUM_USER_ROLE.FACULTY) {
+    profile = await Faculty.findOne({ id: user?.id });
+  } else if (user?.role === ENUM_USER_ROLE.STUDENT) {
+    profile = await Student.findOne({ id: user?.id });
+  };
+
+  if (!profile) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Profile  not found!');
+  };
+
+  if (!profile?.email) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Email  not found!');
+  };
+
+  const passwordResetToken = await JwtHelpers.createPasswordResetToken({ id: user?.id }, config.jwt.secret as string, '5m');
+
+  const resetLink: string = config.resetLink + `token=${passwordResetToken}`;
+
+
+
+  return resetLink;
+};
+
 export const AuthService = {
   loginUser,
   refreshToken,
   changePassword,
+  forgotPassword
 };
