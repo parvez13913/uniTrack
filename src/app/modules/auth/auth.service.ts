@@ -14,6 +14,7 @@ import {
   ILoginUserResponse,
   IRefreshTokenResponse,
 } from './auth.interface';
+import { sendEMail } from './sendResetMail';
 
 const loginUser = async (
   payload: ILoginUser
@@ -157,9 +158,18 @@ const forgotPassword = async (payload: { id: string }) => {
 
   const resetLink: string = config.resetLink + `token=${passwordResetToken}`;
 
+  await sendEMail(profile?.email, `
+    <div>
+       <p>Hi, ${profile?.name?.firstName}</p>
+       <p>your password reset link: ${resetLink}</p>
+       <p>Thank you</p>
+    </div>`);
 
 
-  return resetLink;
+
+  return {
+    message: "Check your email!!"
+  };
 };
 
 export const AuthService = {
