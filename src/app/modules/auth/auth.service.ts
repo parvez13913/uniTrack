@@ -161,7 +161,7 @@ const forgotPassword = async (payload: { id: string }) => {
   await sendEMail(profile?.email, `
     <div>
        <p>Hi, ${profile?.name?.firstName}</p>
-       <p>your password reset link: ${resetLink}</p>
+       <p>your password reset link: <a href=${resetLink}>Click Here</a></p>
        <p>Thank you</p>
     </div>`);
 
