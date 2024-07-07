@@ -1,3 +1,4 @@
+import bcrypt from 'bcrypt';
 import httpStatus from 'http-status';
 import { JwtPayload, Secret } from 'jsonwebtoken';
 import config from '../../../config';
@@ -161,20 +162,35 @@ const forgotPassword = async (payload: { id: string }) => {
   await sendEMail(profile?.email, `
     <div>
        <p>Hi, ${profile?.name?.firstName}</p>
-       <p>your password reset link: ${resetLink}</p>
+       <p>your password reset link: <a href=${resetLink}>Click Here</a></p>
        <p>Thank you</p>
     </div>`);
+};
 
+const resetPassword = async (payload: { id: string, newPassword: string }, token: string,) => {
+  const { id, newPassword } = payload;
+  const user = await User.findOne({ id: id }, { id: 1 });
 
-
-  return {
-    message: "Check your email!!"
+  if (!user) {
+    throw new ApiError(httpStatus.BAD_REQUEST, "User not found!!");
   };
+
+  const isVerified = await JwtHelpers.verifiedToken(token, config.jwt.secret as string,);
+
+  if (!isVerified) {
+    throw new ApiError(httpStatus.UNAUTHORIZED, "You are noot authorized");
+  }
+
+  const password = await bcrypt.hash(newPassword, Number(config.bcrypt_salt_rounds));
+
+  await User.updateOne({ id }, { password });
+
 };
 
 export const AuthService = {
   loginUser,
   refreshToken,
   changePassword,
-  forgotPassword
+  forgotPassword,
+  resetPassword
 };
